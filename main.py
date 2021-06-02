@@ -43,7 +43,7 @@ def job_info(soup):
 available_jobs = [] # List of dictionaries for each job    
 
 # Iterates over each page on indeed to return as many jobs as required
-for i in range(0, 30, 10):
+for i in range(0, 50, 10):
     print(f"Getting Page: {i}")
     c = extract_page(i)
     job_info(c)
@@ -51,4 +51,4 @@ for i in range(0, 30, 10):
 # Transforms list into dataframe for readability purposes
 df = pd.DataFrame(available_jobs)
 print(df)
-# df.to_csv("dev_job_search.csv")
+df.to_csv("dev_job_search.csv")
